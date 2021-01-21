@@ -5,9 +5,9 @@ import (
 	"golang.org/x/crypto/bcrypt"
 )
 
-/*IntentoLogin realiza el chequeo de login de un usuario contra la BD*/
-func IntentoLogin(email string, password string) (models.Usuario, bool) {
-	usuarioEncontrado, encontrado, _ := ChequeoYaExisteUsuario(email)
+/*IntentarLogin realiza el chequeo de login de un usuario contra la BD*/
+func IntentarLogin(email string, password string) (models.Usuario, bool) {
+	usuarioEncontrado, encontrado, _ := ChequearSiExisteUsuario(email)
 	if encontrado == false {
 		return usuarioEncontrado, false
 	}

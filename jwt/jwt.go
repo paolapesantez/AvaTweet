@@ -7,7 +7,7 @@ import (
 	"github.com/paolapesantez/avatweet/models"
 )
 
-func GeneroJWT(usuario models.Usuario) (string, error) {
+func GenerarJWT(usuario models.Usuario) (string, error) {
 	miClave := []byte("SkillFactoryGo_Avalith")
 
 	payload := jwt.MapClaims{

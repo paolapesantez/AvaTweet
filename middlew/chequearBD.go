@@ -6,10 +6,10 @@ import (
 	"github.com/paolapesantez/avatweet/bd"
 )
 
-//ChequeoBD para ...
-func ChequeoBD(next http.HandlerFunc) http.HandlerFunc {
+//ChequearBD para ...
+func ChequearBD(next http.HandlerFunc) http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
-		if bd.ChequeoConnection() == 0 {
+		if bd.ChequearConnection() == 0 {
 			http.Error(w, "Conexion perdida con la base de datos", 500)
 			return
 		}

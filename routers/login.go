@@ -28,13 +28,13 @@ func Login(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, "El email de usuario es requerido ", 400)
 		return
 	}
-	documento, existe := bd.IntentoLogin(usuario.Email, usuario.Password)
+	documento, existe := bd.IntentarLogin(usuario.Email, usuario.Password)
 	if existe == false {
 		http.Error(w, "Usuario y/o contraseña inválidos ", 400)
 		return
 	}
 
-	jwtKey, err := jwt.GeneroJWT(documento)
+	jwtKey, err := jwt.GenerarJWT(documento)
 	if err != nil {
 		http.Error(w, "Ocurrió un error al intentar generar el Token correspondiente"+err.Error(), 400)
 		return

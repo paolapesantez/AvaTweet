@@ -17,11 +17,11 @@ var Email string
 /*IDUsuario es el ID devuelto del modelo, que se usará en todos los endpoints*/
 var IDUsuario string
 
-/*ProcesoToken - proceso token para extraer sus valores
+/*ProcesarToken - proceso token para extraer sus valores
 Es de las funciones más importantes por la cantidad de veces que la vamos a ejecutar,
 porque valida el token y dice si la credencial y los privilegios son válidos.
 En Go si una función tiene varios parámetros y entre ellos un error, hay que ponerlo al final*/
-func ProcesoToken(tk string) (*models.Claim, bool, string, error) {
+func ProcesarToken(tk string) (*models.Claim, bool, string, error) {
 	miClave := []byte("SkillFactoryGo_Avalith")
 	// creo una variable claims de tipo claim del models, se indica como puntero
 	// porque la estructura en donde vuelca el token debe ser un puntero

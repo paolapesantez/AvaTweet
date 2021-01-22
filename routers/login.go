@@ -36,7 +36,7 @@ func Login(w http.ResponseWriter, r *http.Request) {
 
 	jwtKey, err := jwt.GenerarJWT(documento)
 	if err != nil {
-		http.Error(w, "Ocurrió un error al intentar generar el Token correspondiente"+err.Error(), 400)
+		http.Error(w, "Ocurrió un error al intentar generar el Token correspondiente "+err.Error(), 400)
 		return
 	}
 	// Si el token está generado:

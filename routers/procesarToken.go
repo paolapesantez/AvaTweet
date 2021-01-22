@@ -46,6 +46,7 @@ func ProcesarToken(tk string) (*models.Claim, bool, string, error) {
 		}
 		return claims, encontrado, IDUsuario, nil
 	}
+
 	if !tkn.Valid {
 		return claims, false, string(""), errors.New("token invalido")
 	}

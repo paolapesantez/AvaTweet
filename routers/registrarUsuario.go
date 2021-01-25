@@ -8,8 +8,8 @@ import (
 	"github.com/paolapesantez/avatweet/models"
 )
 
-/*Registro es la función para crear en la BD el registro de usuario*/
-func Registro(w http.ResponseWriter, r *http.Request) {
+/*RegistrarUsuario es la función para crear en la BD el registro de usuario*/
+func RegistrarUsuario(w http.ResponseWriter, r *http.Request) {
 
 	var usuario models.Usuario
 	err := json.NewDecoder(r.Body).Decode(&usuario)

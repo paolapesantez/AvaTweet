@@ -16,10 +16,11 @@ import (
 func Manejadores() {
 	router := mux.NewRouter()
 
-	router.HandleFunc("/registro", middlew.ChequearBD(routers.Registro)).Methods("POST")
+	router.HandleFunc("/registro", middlew.ChequearBD(routers.RegistrarUsuario)).Methods("POST")
 	router.HandleFunc("/login", middlew.ChequearBD(routers.Login)).Methods("POST")
 	router.HandleFunc("/verperfil", middlew.ChequearBD(middlew.ValidarJWT(routers.VerPerfil))).Methods("GET")
 	router.HandleFunc("/modificarperfil", middlew.ChequearBD(middlew.ValidarJWT(routers.ModificarPerfil))).Methods("PUT")
+	router.HandleFunc("/tweet", middlew.ChequearBD(middlew.ValidarJWT(routers.GrabarTweet))).Methods("POST")
 
 	PORT := os.Getenv("PORT")
 	if PORT == "" {

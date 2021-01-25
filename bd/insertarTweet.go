@@ -5,7 +5,6 @@ import (
 	"time"
 
 	"github.com/paolapesantez/avatweet/models"
-	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/bson/primitive"
 )
 
@@ -17,12 +16,12 @@ func InsertarTweet(tweet models.TweetUser) (string, bool, error) {
 	db := MongoCN.Database("microblogging")
 	col := db.Collection("tweets")
 
-	registro := bson.M{
+	/*registro := bson.M{
 		"userid":  tweet.UserID,
 		"mensaje": tweet.Mensaje,
 		"fecha":   tweet.Fecha,
-	}
-	result, err := col.InsertOne(ctx, registro)
+	}*/
+	result, err := col.InsertOne(ctx, tweet)
 	if err != nil {
 		return "", false, err
 	}

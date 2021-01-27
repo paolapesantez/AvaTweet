@@ -16,7 +16,7 @@ func BuscarTweets(ID string, pagina int64) ([]*models.TweetId, bool) {
 	defer cancel()
 
 	db := MongoCN.Database("microblogging")
-	col := db.Collection("tweet")
+	col := db.Collection("tweets")
 
 	// Vamos a crear una variable para los resultados también de tipo del modelo de devuelvoTweets
 	// como lo que tengo que devolver

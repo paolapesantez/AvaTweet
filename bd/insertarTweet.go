@@ -22,6 +22,7 @@ func InsertarTweet(tweet models.TweetUser) (string, bool, error) {
 		"fecha":   tweet.Fecha,
 	}*/
 	result, err := col.InsertOne(ctx, tweet)
+
 	if err != nil {
 		return "", false, err
 	}

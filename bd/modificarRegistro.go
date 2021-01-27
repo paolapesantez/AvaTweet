@@ -45,6 +45,7 @@ func ModificarRegistro(usuario models.Usuario, ID string) (bool, error) {
 	if len(usuario.SitioWeb) > 0 {
 		registro["sitioWeb"] = usuario.SitioWeb
 	}
+	//La coma se pone porque esta en multiples lineas
 	updtString := bson.M{
 		"$set": registro,
 	}

@@ -9,8 +9,8 @@ import (
 	"github.com/paolapesantez/avatweet/models"
 )
 
-/*CrearTweet permite grabar el tweet en la BD */
-func CrearTweet(w http.ResponseWriter, r *http.Request) {
+/*EnviarTweet permite grabar el tweet en la BD */
+func EnviarTweet(w http.ResponseWriter, r *http.Request) {
 	var mensaje models.Tweet
 
 	// decodificamos el body y armamos un registro

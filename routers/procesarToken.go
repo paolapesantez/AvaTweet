@@ -39,7 +39,7 @@ func ProcesarToken(tk string) (*models.Claim, bool, string, error) {
 		return miClave, nil
 	})
 	if err == nil { // el token fue válido, hay que ver si el mail que viene en el token es válido
-		_, encontrado, _ := bd.ChequearSiExisteUsuario(claims.Email)
+		_, encontrado, _ := bd.BuscarUsuario(claims.Email)
 		if encontrado == true {
 			Email = claims.Email
 			IDUsuario = claims.ID.Hex()

@@ -7,7 +7,7 @@ import (
 
 /*IntentarLogin realiza el chequeo de login de un usuario contra la BD*/
 func IntentarLogin(email string, password string) (models.Usuario, bool) {
-	usuarioEncontrado, encontrado, _ := ChequearSiExisteUsuario(email)
+	usuarioEncontrado, encontrado, _ := BuscarUsuario(email)
 	if encontrado == false {
 		return usuarioEncontrado, false
 	}

@@ -11,7 +11,7 @@ import (
 )
 
 /*BuscarTweets obtiene los tweets de un perfil, Vamos a devolver un slice, no sabemos la cantidad de tweets que usaremos*/
-func BuscarTweets(ID string, pagina int64) ([]*models.TweetId, bool) {
+func BuscarTweets(ID string, pagina int64) ([]*models.Tweet, bool) {
 	ctx, cancel := context.WithTimeout(context.Background(), 15*time.Second)
 	defer cancel()
 
@@ -20,7 +20,7 @@ func BuscarTweets(ID string, pagina int64) ([]*models.TweetId, bool) {
 
 	// Vamos a crear una variable para los resultados también de tipo del modelo de devuelvoTweets
 	// como lo que tengo que devolver
-	var resultados []*models.TweetId
+	var resultados []*models.Tweet
 
 	//En Mongo podemos ver que los tweets tienen un campo userid
 	//que lo vamos a comparar con lo que nos viene como parámetro (ID)
@@ -61,7 +61,7 @@ func BuscarTweets(ID string, pagina int64) ([]*models.TweetId, bool) {
 	for cursor.Next(context.TODO()) {
 		// Uso una variable registro con alcance dentro de esta iteración
 		// para ir tomando el valor de cada registro leído
-		var registro models.TweetId
+		var registro models.Tweet
 		// leo el registro en cursor
 		err := cursor.Decode(&registro)
 		if err != nil {

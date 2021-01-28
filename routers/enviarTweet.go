@@ -11,12 +11,12 @@ import (
 
 /*EnviarTweet permite grabar el tweet en la BD */
 func EnviarTweet(w http.ResponseWriter, r *http.Request) {
-	var mensaje models.Tweet
+	var mensaje models.TweetMensaje
 
 	// decodificamos el body y armamos un registro
 	err := json.NewDecoder(r.Body).Decode(&mensaje)
 
-	registro := models.TweetUser{
+	registro := models.Tweet{
 		UserID:  IDUsuario,
 		Mensaje: mensaje.Mensaje,
 		Fecha:   time.Now(),

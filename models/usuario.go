@@ -12,7 +12,7 @@ type Usuario struct {
 	   objeto de tipo binario de un tipo llamado ObjectID,
 	   es un slice de bits, que nos llevará a utilizar luego algunas
 	   funciones especiales por este tipo de datos */
-	ID              primitive.ObjectID `bson:"_id,omitempty" json:"id"`
+	ID              primitive.ObjectID `bson:"_id,omitempty" json:"_id"`
 	Nombre          string             `bson:"nombre" json:"nombre,omitempty"`
 	Apellidos       string             `bson:"apellidos" json:"apellidos,omitempty"`
 	FechaNacimiento time.Time          `bson:"fechaNacimiento" json:"fechaNacimiento,omitempty"`

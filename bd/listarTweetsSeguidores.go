@@ -31,7 +31,7 @@ func ListarTweetsSeguidores(ID string, pagina int) ([]models.TweetSeguidores, bo
 	  comando $match para que busque el usuario que tiene el ID que me llega como parámetro
 	  en mi relación*/
 	condiciones = append(condiciones, bson.M{"$match": bson.M{"usuarioid": ID}})
-	/*Ahora con el comando $lookup voy a unir la tabla relacion con la de tweets,
+	/*Ahora con el comando $lookup voy a unir la tabla relaciones con la de tweets,
 	  tiene 4 parámetros necesarios para unir tablas de MongoDB:
 	  "from": con la tabla queremos unir la tabla relacion,
 	  "localField": por qué campo local queremos unirlas,
@@ -66,6 +66,18 @@ func ListarTweetsSeguidores(ID string, pagina int) ([]models.TweetSeguidores, bo
 	  que se ejecuta en la bd MongoDB y me trae el cursor.
 	  Ese cursor directamente ya tiene todo lo que necesitamos para procesar.*/
 	cursor, err := col.Aggregate(ctx, condiciones)
+
+	/*for cursor.Next(ctx) {
+		var tweet models.TweetSeguidores
+		fmt.Println(cursor)
+		//grabamos lo del cursor en el modelo de usuario para leer los campos
+		err := cursor.Decode(&tweet)
+		if err != nil {
+			//encontró un error
+			fmt.Println(err.Error())
+		}
+		fmt.Println(tweet.Tweets.Mensaje)
+	}*/
 
 	/*Creamos un slice para cargar los resultados*/
 	var result []models.TweetSeguidores

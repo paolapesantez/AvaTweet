@@ -11,7 +11,8 @@ type TweetSeguidores struct {
 	ID                primitive.ObjectID `bson:"_id" json:"_id,omitempty"`
 	UserID            string             `bson:"usuarioid" json:"userId,omitempty"`
 	UsuarioRelacionID string             `bson:"usuariorelacionid" json:"userRelationId"`
-	Tweet             struct {
+	//OJO Estra struct debe llamarse como la tabla
+	Tweets struct {
 		ID      string    `bson:"_id" json:"_id,omitempty"`
 		Mensaje string    `bson:"mensaje" json:"mensaje,omitempty"`
 		Fecha   time.Time `bson:"fecha" json:"fecha,omitempty"`

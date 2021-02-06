@@ -14,8 +14,8 @@ func BuscarRelacion(relacion models.Relacion) (bool, error) {
 	ctx, cancel := context.WithTimeout(context.Background(), 15*time.Second)
 	defer cancel()
 
-	db := MongoCN.Database("microblog")
-	col := db.Collection("relacion")
+	db := MongoCN.Database("microblogging")
+	col := db.Collection("relaciones")
 
 	/*Mapeo a bson la relación relacion que viene como parámetro para
 	  buscar en la base de datos*/

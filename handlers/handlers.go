@@ -33,7 +33,7 @@ func Manejadores() {
 	router.HandleFunc("/eliminarRelacion", middlew.ChequearBD(middlew.ValidarJWT(routers.EliminarRelacion))).Methods("DELETE")
 	router.HandleFunc("/consultarRelacion", middlew.ChequearBD(middlew.ValidarJWT(routers.ConsultarRelacion))).Methods("GET")
 
-	router.HandleFunc("/listaUsuarios", middlew.ChequearBD(middlew.ValidarJWT(routers.ListarUsuarios))).Methods("GET")
+	router.HandleFunc("/listarUsuarios", middlew.ChequearBD(middlew.ValidarJWT(routers.ListarUsuarios))).Methods("GET")
 	router.HandleFunc("/leerTweetsSeguidores", middlew.ChequearBD(middlew.ValidarJWT(routers.LeerTweetsSeguidores))).Methods("GET")
 
 	PORT := os.Getenv("PORT")

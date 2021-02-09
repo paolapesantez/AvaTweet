@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"net/http"
 
-	"github.com/paolapesantez/avatweetServer/bd"
+	"github.com/paolapesantez/avatweet-server/bd"
 )
 
 /*VerPerfil - permite extraer los valores del perfil*/

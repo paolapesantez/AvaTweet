@@ -5,8 +5,8 @@ import (
 	"net/http"
 	"os"
 
-	"github.com/paolapesantez/avatweetServer/middlew"
-	"github.com/paolapesantez/avatweetServer/routers"
+	"github.com/paolapesantez/avatweet-server/middlew"
+	"github.com/paolapesantez/avatweet-server/routers"
 
 	"github.com/gorilla/mux"
 	"github.com/rs/cors"

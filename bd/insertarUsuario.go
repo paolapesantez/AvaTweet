@@ -4,7 +4,7 @@ import (
 	"context"
 	"time"
 
-	"github.com/paolapesantez/avatweetServer/models"
+	"github.com/paolapesantez/avatweet-server/models"
 	"go.mongodb.org/mongo-driver/bson/primitive"
 )
 

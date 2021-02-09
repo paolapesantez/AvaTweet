@@ -5,8 +5,8 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/paolapesantez/avatweetServer/bd"
-	"github.com/paolapesantez/avatweetServer/models"
+	"github.com/paolapesantez/avatweet-server/bd"
+	"github.com/paolapesantez/avatweet-server/models"
 )
 
 /*EnviarTweet permite grabar el tweet en la BD */

@@ -5,7 +5,7 @@ import (
 	"net/http"
 	"strconv"
 
-	"github.com/paolapesantez/avatweetServer/bd"
+	"github.com/paolapesantez/avatweet-server/bd"
 )
 
 /*LeerTweetsSeguidores - lee los tweets de todos nuestros seguidores*/

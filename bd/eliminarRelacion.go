@@ -4,7 +4,7 @@ import (
 	"context"
 	"time"
 
-	"github.com/paolapesantez/avatweetServer/models"
+	"github.com/paolapesantez/avatweet-server/models"
 )
 
 /*EliminarRelacion borra la relación en la bd */

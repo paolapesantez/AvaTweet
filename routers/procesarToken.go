@@ -5,8 +5,8 @@ import (
 	"strings"
 
 	jwt "github.com/dgrijalva/jwt-go"
-	"github.com/paolapesantez/avatweetServer/bd"
-	"github.com/paolapesantez/avatweetServer/models"
+	"github.com/paolapesantez/avatweet-server/bd"
+	"github.com/paolapesantez/avatweet-server/models"
 )
 
 /* Voy a crear dos variables globales a ProcesoToken para que pueda utilizarlas dentro y fuera

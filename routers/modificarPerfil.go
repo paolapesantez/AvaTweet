@@ -4,8 +4,8 @@ import (
 	"encoding/json"
 	"net/http"
 
-	"github.com/paolapesantez/avatweetServer/bd"
-	"github.com/paolapesantez/avatweetServer/models"
+	"github.com/paolapesantez/avatweet-server/bd"
+	"github.com/paolapesantez/avatweet-server/models"
 )
 
 /*ModificarPerfil - modifica el perfil de usuario*/

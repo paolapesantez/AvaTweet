@@ -4,7 +4,7 @@ import (
 	"time"
 
 	jwt "github.com/dgrijalva/jwt-go" //Creo un alias para manejarlo más fácil
-	"github.com/paolapesantez/avatweetServer/models"
+	"github.com/paolapesantez/avatweet-server/models"
 )
 
 func GenerarJWT(usuario models.Usuario) (string, error) {

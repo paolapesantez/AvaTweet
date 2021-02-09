@@ -3,7 +3,7 @@ package routers
 import (
 	"net/http"
 
-	"github.com/paolapesantez/avatweetServer/bd"
+	"github.com/paolapesantez/avatweet-server/bd"
 )
 
 /*EliminarTweet permite borrar un tweet determinado */

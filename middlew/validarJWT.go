@@ -3,7 +3,7 @@ package middlew
 import (
 	"net/http"
 
-	"github.com/paolapesantez/avatweetServer/routers"
+	"github.com/paolapesantez/avatweet-server/routers"
 )
 
 //ValidarJWT del token recibido

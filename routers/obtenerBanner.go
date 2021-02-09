@@ -5,7 +5,7 @@ import (
 	"net/http"
 	"os"
 
-	"github.com/paolapesantez/avatweetServer/bd"
+	"github.com/paolapesantez/avatweet-server/bd"
 )
 
 /*ObtenerBanner envía el banner al http */

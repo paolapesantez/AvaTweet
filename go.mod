@@ -1,4 +1,4 @@
-module github.com/paolapesantez/avatweetServer
+module github.com/paolapesantez/avatweet-server
 
 go 1.15
 

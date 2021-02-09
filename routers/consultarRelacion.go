@@ -4,8 +4,8 @@ import (
 	"encoding/json"
 	"net/http"
 
-	"github.com/paolapesantez/avatweet/bd"
-	"github.com/paolapesantez/avatweet/models"
+	"github.com/paolapesantez/avatweetServer/bd"
+	"github.com/paolapesantez/avatweetServer/models"
 )
 
 /*ConsultarRelacion chequea si hay relación entre dos usuarios*/

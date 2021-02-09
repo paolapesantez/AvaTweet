@@ -3,8 +3,8 @@ package main
 import (
 	"log"
 
-	"github.com/paolapesantez/avatweet/bd"
-	"github.com/paolapesantez/avatweet/handlers"
+	"github.com/paolapesantez/avatweetServer/bd"
+	"github.com/paolapesantez/avatweetServer/handlers"
 )
 
 func main() {

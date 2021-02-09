@@ -3,8 +3,8 @@ package routers
 import (
 	"net/http"
 
-	"github.com/paolapesantez/avatweet/bd"
-	"github.com/paolapesantez/avatweet/models"
+	"github.com/paolapesantez/avatweetServer/bd"
+	"github.com/paolapesantez/avatweetServer/models"
 )
 
 /*CrearRelacion - realiza el registro de la relación entre usuarios*/

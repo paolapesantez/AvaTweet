@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/paolapesantez/avatweet/models"
+	"github.com/paolapesantez/avatweetServer/models"
 	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/bson/primitive"
 )

@@ -5,7 +5,7 @@ import (
 	"net/http"
 	"strconv"
 
-	"github.com/paolapesantez/avatweet/bd"
+	"github.com/paolapesantez/avatweetServer/bd"
 )
 
 /*ListarUsuarios - lee la lista de los usuarios*/

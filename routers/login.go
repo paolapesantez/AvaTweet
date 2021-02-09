@@ -5,9 +5,9 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/paolapesantez/avatweet/bd"
-	"github.com/paolapesantez/avatweet/jwt"
-	"github.com/paolapesantez/avatweet/models"
+	"github.com/paolapesantez/avatweetServer/bd"
+	"github.com/paolapesantez/avatweetServer/jwt"
+	"github.com/paolapesantez/avatweetServer/models"
 )
 
 /*Login realiza el login de usuario
@@ -28,13 +28,13 @@ func Login(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, "El email de usuario es requerido ", 400)
 		return
 	}
-	documento, existe := bd.IntentarLogin(usuario.Email, usuario.Password)
+	documentoUsuario, existe := bd.IntentarLogin(usuario.Email, usuario.Password)
 	if existe == false {
 		http.Error(w, "Usuario y/o contraseña inválidos ", 400)
 		return
 	}
 
-	jwtKey, err := jwt.GenerarJWT(documento)
+	jwtKey, err := jwt.GenerarJWT(documentoUsuario)
 	if err != nil {
 		http.Error(w, "Ocurrió un error al intentar generar el Token correspondiente "+err.Error(), 400)
 		return

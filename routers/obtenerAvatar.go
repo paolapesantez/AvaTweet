@@ -5,7 +5,7 @@ import (
 	"net/http"
 	"os"
 
-	"github.com/paolapesantez/avatweet/bd"
+	"github.com/paolapesantez/avatweetServer/bd"
 )
 
 /*ObtenerAvatar envía el avatar al http */

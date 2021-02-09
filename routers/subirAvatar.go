@@ -6,8 +6,8 @@ import (
 	"os"
 	"strings"
 
-	"github.com/paolapesantez/avatweet/bd"
-	"github.com/paolapesantez/avatweet/models"
+	"github.com/paolapesantez/avatweetServer/bd"
+	"github.com/paolapesantez/avatweetServer/models"
 )
 
 /*SubirAvatar sube el avatar al servidor */

@@ -4,7 +4,7 @@ import (
 	"context"
 	"time"
 
-	"github.com/paolapesantez/avatweet/models"
+	"github.com/paolapesantez/avatweetServer/models"
 )
 
 /*InsertarRelacion - graba la relación en la bd*/

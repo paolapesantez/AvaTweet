@@ -1,7 +1,7 @@
 package bd
 
 import (
-	"github.com/paolapesantez/avatweet/models"
+	"github.com/paolapesantez/avatweetServer/models"
 	"golang.org/x/crypto/bcrypt"
 )
 

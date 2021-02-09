@@ -3,7 +3,7 @@ package middlew
 import (
 	"net/http"
 
-	"github.com/paolapesantez/avatweet/bd"
+	"github.com/paolapesantez/avatweetServer/bd"
 )
 
 //ChequearBD para ...

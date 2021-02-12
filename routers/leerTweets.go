@@ -29,7 +29,7 @@ func LeerTweets(w http.ResponseWriter, r *http.Request) {
 	pag := int64(pagina)
 	respuesta, correcto := bd.BuscarTweets(ID, pag)
 	if correcto == false {
-		http.Error(w, "error al leer los Tweets", http.StatusBadRequest)
+		http.Error(w, "Error al leer los Tweets", http.StatusBadRequest)
 		return
 	}
 

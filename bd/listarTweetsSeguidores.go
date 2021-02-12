@@ -44,17 +44,17 @@ func ListarTweetsSeguidores(ID string, pagina int) ([]models.TweetSeguidores, bo
 			"from":         "tweets",
 			"localField":   "usuariorelacionid",
 			"foreignField": "userid",
-			"as":           "tweets",
+			"as":           "campos",
 		}})
 
 	/*El comando $unwind hace que no me venga todo como maestro-detalle,
 	  con ese comando todos los documentos vienen iguales y es más fácil procesar
 	  la información, aunque venga info repetida*/
-	condiciones = append(condiciones, bson.M{"$unwind": "$tweets"})
+	condiciones = append(condiciones, bson.M{"$unwind": "$campos"})
 
 	/*Ahora con el comando $sort le indicamos el orden, con la condición
 	  que le decimos que sea por el campo fecha, en orden descendente, por eso -1*/
-	condiciones = append(condiciones, bson.M{"$sort": bson.M{"fecha": -1}})
+	condiciones = append(condiciones, bson.M{"$sort": bson.M{"campos.fecha": -1}})
 
 	/*con el comando $skip le decimos de a cuanto hace el salto*/
 	condiciones = append(condiciones, bson.M{"$skip": skip})

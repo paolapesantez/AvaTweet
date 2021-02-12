@@ -20,6 +20,7 @@ func Manejadores() {
 	router.HandleFunc("/login", middlew.ChequearBD(routers.Login)).Methods("POST")
 	router.HandleFunc("/verPerfil", middlew.ChequearBD(middlew.ValidarJWT(routers.VerPerfil))).Methods("GET")
 	router.HandleFunc("/modificarPerfil", middlew.ChequearBD(middlew.ValidarJWT(routers.ModificarPerfil))).Methods("PUT")
+
 	router.HandleFunc("/subirAvatar", middlew.ChequearBD(middlew.ValidarJWT(routers.SubirAvatar))).Methods("POST")
 	router.HandleFunc("/subirBanner", middlew.ChequearBD(middlew.ValidarJWT(routers.SubirBanner))).Methods("POST")
 	router.HandleFunc("/obtenerAvatar", middlew.ChequearBD(routers.ObtenerAvatar)).Methods("GET")
